@@ -150,3 +150,24 @@
     }
   }
 }
+
+
+#navbar>div {
+    background: var(--card-bg);
+    border-radius: var(--radius-large);
+    transition: all .3s cubic-bezier(.4,0,.2,1)
+}
+
+body:has(#banner-wrapper) #navbar>div {
+    backdrop-filter: blur(20px);
+    background: #ffffff8c;
+    border: 1px solid rgba(255,255,255,.55);
+    border-radius: .75rem;
+    box-shadow: 0 4px 16px #0000001a
+}
+
+:root.dark body:has(#banner-wrapper) #navbar>div {
+    background: #0000008c;
+    border-color: #0000008c;
+    box-shadow: 0 4px 16px #0003
+}
