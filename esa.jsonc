@@ -1,0 +1,7 @@
+{
+  "name": "astro-blog-fuwari",
+  "installCommand": "pnpm i",
+  "assets": {
+    "directory": "./dist"
+  }
+}
