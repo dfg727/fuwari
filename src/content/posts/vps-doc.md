@@ -13,7 +13,7 @@ draft: false
 更新系统: `bash <(curl -Ls ssh_tool.eooce.com)`
 
 aaPanel Internal Address: https://{IP}:{Port}/0e82fc5c
-username: admin
+username: 随机字符串
 password: *****
 
 ## 宝塔海外版
@@ -53,7 +53,8 @@ services:
         network_mode: host
 ```
 5. 系统放行端口 `ufw allow 端口号` 多个:`ufw allow 2053,2096/tcp`
-6. 登陆3x-ui: `https://3x-ui.94sub.qzz.io` 或者 `https://3x-ui.94sub.qzz.io:2053`, 默认用户名密码:`admin /admin`
+6. 登陆3x-ui: `https://3x-ui.94sub.qzz.io` 或者 `https://3x-ui.94sub.qzz.io:2053`, 
+	默认用户名密码:`admin /*****`
 7. 可选: 3x-ui - 面板设置, 修改用户名密码, 面板默认 URI 路径, 订阅默认 URI 路径
 8. 3x-ui - 面板设置 - 常规 - 证书
 	公钥路径：`/root/cert/fullchain.pem`
@@ -95,7 +96,7 @@ docker run -d \
 	- agent端口 `nz.94sub.qzz.io:8008`
 	- TLS: no
 5. 打开url: `https://nz.94sub.qzz.io` 登录面板
-	- 默认用户名密码: `admin / admin`
+	- 默认用户名密码: `admin / *****`
 6. 复制安装命令到服务器执行安装agent
 	`curl -L https://raw.githubusercontent.com/nezhahq/scripts/main/agent/install.sh -o agent.sh && chmod +x agent.sh && env NZ_SERVER=nz.94sub.qzz.io:8008 NZ_TLS=false NZ_CLIENT_SECRET=Y8tOGEN6IZaa7ZyhXcJr3xdaFMk97iau ./agent.sh`
 7. 修改config.yml重启, 卸载agent
